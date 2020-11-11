@@ -3,11 +3,12 @@ class Letters {
   float letterY;
   float speed;
   float maxY;
-  char c;
-  Letters(char initC, float initLetterX, float initLetterY) { //<>//
+  int c;
+  Letters(int c, float initLetterX, float initLetterY) {
     letterX = initLetterX;
     letterY = initLetterY;
-    c=initC;
+    letterX = width/2;
+    letterY = height/2;
     speed = 3;
     maxY = height/2+200;
   }

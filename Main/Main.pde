@@ -17,9 +17,9 @@ void setup() {
   words= split(storeText, " ");
   wordObjects= new Words[words.length];
   background= new Background();
-  wordObjects[0]= new Words(words[0], 50, 100, mouseX, mouseY);
+  wordObjects[0]= new Words(words[0], 50, 100);
   for (int i=1; i<wordObjects.length; i++) {
-    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y, mouseX, mouseY);
+    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
   }
   sheep = new Sheep[2];
   sheep[0] = new Sheep();
@@ -32,7 +32,7 @@ void draw() {
   sheep[1].display();
   sheep[1].update();
   for (int i=0; i<words.length; i++) {
-    wordObjects[i].update();
+    wordObjects[i].update(mouseX, mouseY);
   }
 }
 void mouseMoved() {

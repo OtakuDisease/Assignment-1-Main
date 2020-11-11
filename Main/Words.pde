@@ -7,12 +7,10 @@ class Words { //<>//
   char c;
   float mouseXPos, mouseYPos;
   boolean falling=false;
-  Words(String initWord, float initX, float initY, float initMouseXPos, float initMouseYPos) {
+  Words(String initWord, float initX, float initY) {
     word=initWord;
     x=initX;
     y=initY;
-    mouseXPos=initMouseXPos;
-    mouseYPos=initMouseYPos;
     letterObjects= new Letters[word.length()];
     for (int i=0; i<word.length(); i++) {
       c= word.charAt(i);
@@ -22,9 +20,9 @@ class Words { //<>//
     }
   }
 
-  void update() {
+  void update(float mouseXPos, float mouseYPos) {
     for (int i=0; i<letterObjects.length; i++) {
-      if (mouseXPos>letterObjects[0].letterX&&mouseXPos<letterObjects[letterObjects.length-1].letterX) {
+      if (mouseXPos>letterObjects[0].letterX && mouseXPos<letterObjects[letterObjects.length-1].letterX && mouseYPos>letterObjects[0].letterY-30&& mouseYPos>letterObjects[0].letterY+30) {
         falling=true;
       }
       if (falling) {

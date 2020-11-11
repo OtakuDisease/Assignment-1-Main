@@ -13,15 +13,15 @@ class Words {
     for (int i=0; i<word.length(); i++) {
       c= word.charAt(i);
       letterObjects[i]=new Letters(c, x, y);
-       wordWidth+=textWidth(c);
+      wordWidth+=textWidth(c);
       x=x+textWidth(c)+10; //<>//
-    }  
+    }
   }
-  
-  void update(){
-  for (int i=0; i<letterObjects.length; i++) {
-    letterObjects[i].update();
-    letterObjects[i].display();
-  }
+
+  void update() {
+    for (int i=0; i<letterObjects.length; i++) {
+      letterObjects[i].update();
+      letterObjects[i].display();
+    }
   }
 }

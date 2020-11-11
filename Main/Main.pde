@@ -33,5 +33,5 @@ void draw() {
   }
 }
 
-void mouseMoved() {
+void mouseDragged() {
 }

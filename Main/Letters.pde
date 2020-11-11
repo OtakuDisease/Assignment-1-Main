@@ -8,7 +8,7 @@ class Letters {
     letterX = initLetterX;
     letterY = initLetterY;
     c=initC;
-    speed = 3;
+    speed = random(1, 3);
     maxY = height/2+200;
   }
 

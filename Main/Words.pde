@@ -1,11 +1,18 @@
 class Words {
   Letters[] letterObjects;
   String word;
-  Words(String initWord) {
+  int wordWidth;
+  int x;
+  int y;
+  Words(String initWord, int initX, int initY) {
     word=initWord;
+    x=initX;
+    y=initY;
     letterObjects= new Letters[word.length()];
     for (int i=0; i<word.length(); i++) {
       char c= word.charAt(i);
+      wordWidth+=textWidth(c);
+      x+=textWidth(c);
       letterObjects[i]=new Letters(c, x, y);
     }  
   }

@@ -4,7 +4,7 @@ class Letters {
   float speed;
   float maxY;
   char c;
-  Letters(char initC, float initLetterX, float initLetterY) { //<>//
+  Letters(char initC, float initLetterX, float initLetterY) { //<>// //<>//
     letterX = initLetterX;
     letterY = initLetterY;
     c=initC;
@@ -18,6 +18,7 @@ class Letters {
     } else { 
       letterY = maxY;
     }
+    letterX+=-1;
   }
 
   void display() {

@@ -15,8 +15,7 @@ void setup() {
   lines = loadStrings("data/tekst.txt.txt");
   storeText=join(lines, " ");
   words= split(storeText, " ");
-  int aantalWoorden= words.length;
-  wordObjects= new Words[aantalWoorden];
+  wordObjects= new Words[words.length];
   background= new Background();
   sheep = new Sheep();
   wordObjects[0]= new Words(words[0], 50, 100);

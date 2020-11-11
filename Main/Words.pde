@@ -16,4 +16,10 @@ class Words {
       letterObjects[i]=new Letters(c, x, y);
     }  
   }
+  
+  void update(){
+  for (int i=0; i<letterObjects.length; i++) {
+    letterObjects[i].update();
+  }
+  }
 }

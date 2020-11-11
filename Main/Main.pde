@@ -5,16 +5,17 @@ String[] lines;
 char c;
 String storeText;
 String[] words;
+Words[] wordObjects;
 void setup(){
   size(800,800);
   sketchPath("/data");
   lines = loadStrings("data/tekst.txt.txt");
   storeText=join(lines," ");
   words= split(storeText," ");
-  c = lines[0].charAt(3);
   for(int i=0;i<words.length;i++){
-  println(words[i]);
+  wordObjects[i]= new Words(words[i]);
   }
+  c = lines[0].charAt(3);
 }
 void draw(){
  text(lines[0], 100,100);

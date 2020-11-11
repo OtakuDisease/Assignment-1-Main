@@ -18,7 +18,6 @@ void setup(){
 }
 void draw(){
  text(lines[0], 100,100);
- rect(100,100,100,100);
 }
 
 void mouseMoved(){

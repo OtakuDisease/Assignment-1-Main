@@ -26,8 +26,8 @@ class Letters {
     }
     //Make letters move to the left
   }
-  void updateX(){
-  letterX+=-1;
+  void updateX() {
+    letterX+=-1;
   }
 
   void display() {

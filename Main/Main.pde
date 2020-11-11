@@ -41,10 +41,15 @@ void draw() {
     wordObjects[i].update(mouseX, mouseY);
   }
 }
-void drawSentence(){
+void drawSentence() {
+
   //Creating new objects
   wordObjects= new Words[words.length];
   background= new Background();
+  wordObjects[0]= new Words(words[0], 50, 100);
+  for (int i=1; i<wordObjects.length; i++) {
+    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
+  }
   wordObjects[0]= new Words(words[0], 50, 100);
   for (int i=1; i<wordObjects.length; i++) {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);

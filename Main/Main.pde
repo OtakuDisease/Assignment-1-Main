@@ -5,7 +5,7 @@ String[] lines;
 void setup(){
   size(800,800);
   sketchPath("/data");
-  lines = loadStrings("data/tekst.txt");
+  lines = loadStrings("data/tekst.txt.txt");
   
 }
 void draw(){

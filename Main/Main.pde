@@ -5,7 +5,7 @@ String storeText;
 String[] words;
 Words[] wordObjects;
 Background background;
-Sheep sheep;
+Sheep[] sheep;
 PFont font;
 void setup() {
   size(800, 800);
@@ -22,11 +22,16 @@ void setup() {
   for (int i=1; i<wordObjects.length; i++) {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
   }
+  sheep = new Sheep[2];
+  sheep[0] = new Sheep();
+  sheep[1] = new Sheep();
 }
 void draw() {
   background.display();
-  sheep.display();
-  sheep.update();
+  sheep[0].display();
+  sheep[0].update(); 
+  sheep[1].display();
+  sheep[1].update();
   for (int i=0; i<words.length; i++) {
     wordObjects[i].update();
   }

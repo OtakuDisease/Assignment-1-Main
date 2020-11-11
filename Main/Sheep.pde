@@ -3,10 +3,10 @@ class Sheep {
   float sheepSize, sheepSpeed;
 
   Sheep() {
-    sheepX=width/2;
+    sheepX=random(0, width);
     sheepY=height/2+height/6;
-    sheepSize= width/4;
-    sheepSpeed = 1;
+    sheepSize= width/7;
+    sheepSpeed = random(width/800, width/600);
   }
 
 
@@ -14,19 +14,57 @@ class Sheep {
     pushMatrix();
     translate(sheepX, sheepY);
     noStroke();
-    fill(255);
-    //head
-    ellipse(sheepSize/2, sheepSize*-0.35, sheepSize/2, sheepSize/2);
+    //poten
+    fill(149, 106, 11);
+    rect(sheepSize/2, sheepSize/3, sheepSize/10, sheepSize/2);
+    rect(sheepSize/3, sheepSize/3, sheepSize/10, sheepSize/2);
+    rect(sheepSize/-2, sheepSize/3, sheepSize/10, sheepSize/2);
+    rect(sheepSize/-3, sheepSize/3, sheepSize/10, sheepSize/2);
+
+
+    //ears
+    pushMatrix();
+    translate(sheepSize/2, sheepSize*-0.35);
+    fill(240, 197, 133);
+    ellipse(0, sheepSize/-3.5, sheepSize/12, sheepSize/6);
+
+    popMatrix();
+
     //body
+    fill(255);
     ellipse(0, sheepSize*-0.05, sheepSize/1.2, sheepSize/1.2);
     rect(0, 0, sheepSize*1.2, sheepSize/2, sheepSize*4);
-    //poten
+
+    //tail
+    ellipse(sheepSize/-1.7, sheepSize/-10, sheepSize/8, sheepSize/8);
+
+    //head
+    fill(255);
+    ellipse(sheepSize/2, sheepSize*-0.35, sheepSize/2, sheepSize/2);
+    fill(240, 197, 133);
+    ellipse(sheepSize/1.8, sheepSize*-0.35, sheepSize/2.5, sheepSize/2.5);
+
+    //eye
+    pushMatrix();
+    translate(sheepSize/2, sheepSize*-0.35);
+    fill(0);
+    ellipse(sheepSize/8, sheepSize/-20, sheepSize/12, sheepSize/12);
+
+    //nose
+    fill(216, 86, 11);
+    ellipse(sheepSize/4, sheepSize/20, sheepSize/18, sheepSize/18);
+
+    popMatrix();
+
+
+
+
     popMatrix();
   }
 
   void update() {
-    if (sheepX>width*1.1) {
-      sheepX = width*-0.1;
+    if (sheepX>width*1.2) {
+      sheepX = width*-0.2;
     } else {
       sheepX += sheepSpeed;
     }

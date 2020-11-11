@@ -19,7 +19,7 @@ void setup() {
   wordObjects= new Words[aantalWoorden];
   background= new Background();
   sheep = new Sheep();
-  for (int i=0; i<words.length; i++) {
+  for (int i=0; i<wordObjects.length; i++) {
     wordObjects[i]= new Words(words[i], 100,100);
   }
 }

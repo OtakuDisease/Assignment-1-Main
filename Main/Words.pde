@@ -1,10 +1,10 @@
 class Words {
-  Letters[] letterObjects;
+  Letters[] letterObjects; //<>//
   String word;
   int wordWidth;
   int x;
   int y;
-  Words(String initWord, int initX, int initY) {
+  Words(String initWord, int initX, int initY) { //<>//
     word=initWord;
     x=initX;
     y=initY;

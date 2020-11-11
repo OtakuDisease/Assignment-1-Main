@@ -1,4 +1,4 @@
-/* This is assignment 1 of group 5 of Programming & Physical Computing //<>//
+/* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
  
@@ -51,7 +51,7 @@ void drawSentence() {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
     totalSentenceLength+=wordObjects[i].wordWidth;
   }
-  wordObjects[0]= new Words(words[0], 50, 100);
+  wordObjects[0]= new Words(words[0], 50, 200);
   for (int i=1; i<wordObjects.length; i++) {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
   }
@@ -61,7 +61,9 @@ void keyPressed() {
   scramble();
   }
   if (keyCode == DOWN){
-  Letters.textResize();
+  for (int i=0; i<wordObjects.length; i++){
+    wordObjects[i].textResize();
+  }
   }
 }
 

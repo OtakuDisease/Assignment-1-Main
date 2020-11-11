@@ -26,7 +26,6 @@ class Words {
     }
   }
 
-
   void update(float mouseXPos, float mouseYPos) {
     //Showing of the letters
 
@@ -39,6 +38,11 @@ class Words {
       }
       letterObjects[i].updateX();
       letterObjects[i].display();
+    }
+  }
+  void textResize(){
+  for (int i=0; i<word.length(); i++) {
+     letterObjects[i].textResize();
     }
   }
 }

@@ -4,14 +4,14 @@ class Letters {
 
   //Introducing variables
   float letterX;
-  float letterY; //<>//
+  float letterY; //<>// //<>//
   float normalHeight;
   float speed;
   float maxY;
   char c;
   float letterSizeMin;
   float letterSizeMax;
-
+  int mySize;
   Letters(char initC, float initLetterX, float initLetterY) { 
     letterX = initLetterX;
     letterY = initLetterY;
@@ -21,6 +21,7 @@ class Letters {
     maxY = height/2+200;
     letterSizeMin = 20;
     letterSizeMax = 60;
+    mySize=50;
   }
 
   void updateY() {
@@ -45,10 +46,11 @@ class Letters {
 
   void display() {
     fill(255);
+    textSize(mySize);
     text(c, letterX, letterY);
   }
   
   void textResize(){
-    textSize(random(letterSizeMin,letterSizeMax));
+    mySize=int(random(letterSizeMin,letterSizeMax));
   }
 }

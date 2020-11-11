@@ -25,10 +25,13 @@ class Letters {
       letterY = maxY;
     }
     //Make letters move to the left
-    letterX+=-1;
+  }
+  void updateX(){
+  letterX+=-1;
   }
 
   void display() {
+    fill(255);
     text(c, letterX, letterY);
   }
 }

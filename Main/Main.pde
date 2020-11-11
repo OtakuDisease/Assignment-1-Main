@@ -30,9 +30,9 @@ void setup() {
   //Creating new objects
   wordObjects= new Words[words.length];
   background= new Background();
-  wordObjects[0]= new Words(words[0], 50, 100);
+  wordObjects[0]= new Words(words[0], 50, 100, mouseX, mouseY);
   for (int i=1; i<wordObjects.length; i++) {
-    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
+    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y, mouseX, mouseY);
   }
   sheep = new Sheep[2];
   sheep[0] = new Sheep();
@@ -49,4 +49,5 @@ void draw() {
   }
 }
 void mouseMoved() {
+  
 }

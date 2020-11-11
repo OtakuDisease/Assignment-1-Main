@@ -4,13 +4,14 @@ class Sheep {
 
   //Introducing variables
   float sheepX, sheepY;
-  float sheepSize, sheepSpeed;
+  float sheepSize, sheepSpeed, sheepHop;
 
-  Sheep() {
-    sheepX=random(0, width);
+  Sheep(float initX) {
+    sheepX = initX;
     sheepY=height/2+height/6;
     sheepSize= width/7;
     sheepSpeed = random(width/800, width/600);
+    sheepHop = 0.8;
   }
 
 
@@ -67,6 +68,13 @@ class Sheep {
       sheepX = width*-0.2;
     } else {
       sheepX += sheepSpeed;
+    }
+
+    if (sheepY>height/2+height/10 ) {
+      sheepY -= sheepHop;
+    } 
+    if (sheepY<height/2+height/10+10 || sheepY>height/2+height/5  ) {
+      sheepHop = sheepHop*-1;
     }
   }
 }

@@ -35,8 +35,8 @@ void setup() {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
   }
   sheep = new Sheep[2];
-  sheep[0] = new Sheep();
-  sheep[1] = new Sheep();
+  sheep[0] = new Sheep(0);
+  sheep[1] = new Sheep(width/2);
 }
 void draw() {
   background.display();

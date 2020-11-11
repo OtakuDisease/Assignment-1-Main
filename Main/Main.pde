@@ -29,7 +29,6 @@ void draw() {
   sheep.update();
   for (int i=0; i<words.length; i++) {
     wordObjects[i].update();
-    println(i);
   }
 }
 void mouseMoved() {

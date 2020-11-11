@@ -12,13 +12,15 @@ class Letters {
     maxY = height/2+200;
   }
 
-  void update() {
+  void updateY() {
     if (letterY+speed <maxY) {
       letterY+=speed;
     } else { 
       letterY = maxY;
     }
-    letterX+=-1;
+  }
+  void updateX(){
+  letterX+=-1;
   }
 
   void display() {

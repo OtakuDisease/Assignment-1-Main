@@ -4,7 +4,7 @@ by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle*/
 String[] lines;
 void setup(){
   sketchPath("/data");
-  lines = loadStrings("data/tekst.txt");
+  lines = loadStrings("data/tekst.txt.txt");
   
 }
 void draw(){

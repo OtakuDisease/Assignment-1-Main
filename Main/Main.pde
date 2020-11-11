@@ -11,7 +11,7 @@ String[] lines;
 String storeText;
 String[] words;
 PFont font;
-
+int totalSentenceLength;
 //Reference classes
 Words[] wordObjects;
 Background background;
@@ -33,10 +33,10 @@ void setup() {
 }
 void draw() {
   background.display();
-  sheep[0].display();
-  sheep[0].update(); 
-  sheep[1].display();
-  sheep[1].update();
+  for(int i=0;i<sheep.length;i++){
+  sheep[i].display();
+  sheep[i].update(); 
+  }
   for (int i=0; i<words.length; i++) {
     wordObjects[i].update(mouseX, mouseY);
   }
@@ -45,8 +45,9 @@ void drawSentence(){
   //Creating new objects
   wordObjects= new Words[words.length];
   background= new Background();
-  wordObjects[0]= new Words(words[0], 50, 100);
+  wordObjects[0]= new Words(words[0], 100, 200);
   for (int i=1; i<wordObjects.length; i++) {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
+    totalSentenceLength+=wordObjects[i].wordWidth;
   }
 }

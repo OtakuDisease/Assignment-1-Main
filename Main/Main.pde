@@ -22,7 +22,7 @@ void setup(){
 void draw(){
  text(lines[0], 100,100);
  for(int i = 0; i<= 3; i++){
-  text(lines[i], 100,100+10*i);
+  text(lines[i], 100,100+50*i);
  }
 }
 

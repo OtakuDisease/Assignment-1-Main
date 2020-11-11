@@ -3,6 +3,7 @@ by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle*/
 
 String[] lines;
 void setup(){
+  size(800,800);
   sketchPath("/data");
   lines = loadStrings("data/tekst.txt");
   

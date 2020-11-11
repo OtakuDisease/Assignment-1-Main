@@ -2,11 +2,12 @@
 by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle*/
 
 String[] lines;
+char c;
 void setup(){
   size(800,800);
   sketchPath("/data");
   lines = loadStrings("data/tekst.txt.txt");
-  char c = lines[0].charAt(3);
+  c = lines[0].charAt(8);
 
   
 }

@@ -5,6 +5,7 @@ String storeText;
 String[] words;
 Words[] wordObjects;
 Background background;
+Sheep sheep;
 PFont font;
 void setup() {
   size(800, 800);
@@ -17,12 +18,15 @@ void setup() {
   int aantalWoorden= words.length;
   wordObjects= new Words[aantalWoorden];
   background= new Background();
+  sheep = new Sheep();
   for (int i=0; i<words.length; i++) {
     wordObjects[i]= new Words(words[i], 100,100);
   }
 }
 void draw() {
   background.display();
+  sheep.display();
+  sheep.update();
   text(lines[0], 100, 100);
   for (int i = 0; i<= 3; i++) {
     text(lines[i], 100, 100+40*i);

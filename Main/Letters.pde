@@ -8,6 +8,8 @@ class Letters {
   float speed;
   float maxY;
   char c;
+  float letterSizeMin;
+  float letterSizeMax;
 
   Letters(char initC, float initLetterX, float initLetterY) { 
     letterX = initLetterX;
@@ -15,6 +17,8 @@ class Letters {
     c=initC;
     speed = random(1, 3);
     maxY = height/2+200;
+    letterSizeMin = 20;
+    letterSizeMax = 60;
   }
 
   void updateY() {
@@ -32,6 +36,7 @@ class Letters {
 
   void display() {
     fill(255);
+    textSize(random(letterSizeMin,letterSizeMax));
     text(c, letterX, letterY);
   }
 }

@@ -57,7 +57,12 @@ void drawSentence() {
   }
 }
 void keyPressed() {
+  if (keyCode == UP){
   scramble();
+  }
+  if (keyCode == DOWN){
+  Letters.textResize();
+  }
 }
 
 void scramble() {

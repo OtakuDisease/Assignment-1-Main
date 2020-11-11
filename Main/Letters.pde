@@ -45,7 +45,10 @@ class Letters {
 
   void display() {
     fill(255);
-    textSize(random(letterSizeMin,letterSizeMax));
     text(c, letterX, letterY);
+  }
+  
+  void textResize(){
+    textSize(random(letterSizeMin,letterSizeMax));
   }
 }

@@ -1,5 +1,7 @@
 class Words{
-Words(){
-
+  String word;
+Words(String initWord){
+word=initWord;
 }
+
 }

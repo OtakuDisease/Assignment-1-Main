@@ -18,7 +18,7 @@ void setup() {
   wordObjects= new Words[aantalWoorden];
   background= new Background();
   for (int i=0; i<words.length; i++) {
-    wordObjects[i]= new Words(words[i]);
+    wordObjects[i]= new Words(words[i], 100,100);
   }
 }
 void draw() {

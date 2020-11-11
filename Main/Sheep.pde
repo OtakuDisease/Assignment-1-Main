@@ -67,14 +67,14 @@ class Sheep {
     if (sheepX>width*1.2) {
       sheepX = width*-0.2;
     } else {
-      sheepX += sheepSpeed;
+      sheepX += sheepSpeed;  // makes the sheep move from left to right and come back in the screen on the left
     }
 
     if (sheepY>height/2+height/10 ) {
-      sheepY -= sheepHop;
+      sheepY -= sheepHop; // makes the sheep hop upwards
     } 
     if (sheepY<height/2+height/10+10 || sheepY>height/2+height/5  ) {
-      sheepHop = sheepHop*-1;
+      sheepHop = sheepHop*-1; //makes the sheep land on their feet again
     }
   }
 }

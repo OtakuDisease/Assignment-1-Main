@@ -1,6 +1,5 @@
 /* This is assignment 1 of group 5 of Programming & Physical Computing
-by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle*/
-
+ by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle*/
 String[] lines;
 String storeText;
 String[] words;
@@ -32,8 +31,10 @@ void setup(){
 }
 void draw(){
  text(lines[0], 100,100);
+ for(int i = 0; i<= 3; i++){
+  text(lines[i], 100,100+10*i);
+ }
 }
 
-void mouseMoved(){
-
+void mouseMoved() {
 }

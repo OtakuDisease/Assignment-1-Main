@@ -1,0 +1,20 @@
+/* This is assignment 1 of group 5 of Programming & Physical Computing
+ by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle*/
+PFont f;
+String[] lines;
+void setup() {
+  size(800, 800);
+  sketchPath("/data");
+  lines = loadStrings("data/tekst.txt.txt");
+  f = createFont("Arial",20,true);
+}
+void draw() {
+
+  textFont(f);                  // Set the font                   
+  fill(255, 0, 0);
+  text(lines[0], 100,50);
+  rect(100, 100, 100, 100);
+}
+
+void mouseMoved() {
+}

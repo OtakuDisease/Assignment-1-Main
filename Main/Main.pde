@@ -4,26 +4,29 @@ String[] lines;
 String storeText;
 String[] words;
 Words[] wordObjects;
+Background background;
 PFont font;
-void setup(){
-  size(800,800);
+void setup() {
+  size(800, 800);
   font = loadFont("Calibri-48.vlw");
   textFont(font);
   sketchPath("/data");
   lines = loadStrings("data/tekst.txt.txt");
-  storeText=join(lines," ");
-  words= split(storeText," ");
+  storeText=join(lines, " ");
+  words= split(storeText, " ");
   int aantalWoorden= words.length;
   wordObjects= new Words[aantalWoorden];
-  for(int i=0;i<words.length;i++){
-  wordObjects[i]= new Words(words[i]);
+  background= new Background();
+  for (int i=0; i<words.length; i++) {
+    wordObjects[i]= new Words(words[i]);
   }
 }
-void draw(){
- text(lines[0], 100,100);
- for(int i = 0; i<= 3; i++){
-  text(lines[i], 100,100+40*i);
- }
+void draw() {
+  background.display();
+  text(lines[0], 100, 100);
+  for (int i = 0; i<= 3; i++) {
+    text(lines[i], 100, 100+40*i);
+  }
 }
 
 void mouseMoved() {

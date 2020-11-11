@@ -31,6 +31,7 @@ void setup() {
   sheep = new Sheep[2];
   sheep[0] = new Sheep(0);
   sheep[1] = new Sheep(width/2);
+  background= new Background();
 }
 void draw() {
   background.display();
@@ -46,7 +47,6 @@ void drawSentence() {
   //reset and make the wordObject array;
   wordObjects= new Words[words.length];
   //Creating new objects
-  background= new Background();
   wordObjects[0]= new Words(words[0], 100, 200);
   //make for every wordObject a word and calculate the total sentence width
   for (int i=1; i<wordObjects.length; i++) {
@@ -56,13 +56,13 @@ void drawSentence() {
 }
 
 void keyPressed() {
-  if (keyCode == UP){
-  scramble();
+  if (keyCode == UP) {
+    scramble();
   }
-  if (keyCode == DOWN){
-  for (int i=0; i<wordObjects.length; i++){
-    wordObjects[i].textResize();
-  }
+  if (keyCode == DOWN) {
+    for (int i=0; i<wordObjects.length; i++) {
+      wordObjects[i].textResize();
+    }
   }
 }
 

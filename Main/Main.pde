@@ -3,18 +3,28 @@ by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle*/
 
 String[] lines;
 char c;
+String storeText;
+String[] words;
+PFont font;
 void setup(){
   size(800,800);
   sketchPath("/data");
   lines = loadStrings("data/tekst.txt.txt");
   c = lines[0].charAt(8);
-
+  storeText=join(lines," ");
+  words= split(storeText," ");
+  c = lines[0].charAt(3);
+  for(int i=0;i<words.length;i++){
+  println(words[i]);
   
+
+  font = loadFont("Calibri-48.vlw");
+  textFont(font);
+  }
+
 }
 void draw(){
  text(lines[0], 100,100);
- rect(100,100,100,100);
- println(c);                // Results in 'e'
 }
 
 void mouseMoved(){

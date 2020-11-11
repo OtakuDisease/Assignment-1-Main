@@ -1,4 +1,8 @@
+//the sheeps and their interactions are created in this class.
+
 class Sheep {
+
+  //Introducing variables
   float sheepX, sheepY;
   float sheepSize, sheepSpeed;
 
@@ -11,9 +15,12 @@ class Sheep {
 
 
   void display() {
+
+    //Matrix for general sheep  
     pushMatrix();
     translate(sheepX, sheepY);
     noStroke();
+
     //poten
     fill(149, 106, 11);
     rect(sheepSize/2, sheepSize/3, sheepSize/10, sheepSize/2);
@@ -21,13 +28,11 @@ class Sheep {
     rect(sheepSize/-2, sheepSize/3, sheepSize/10, sheepSize/2);
     rect(sheepSize/-3, sheepSize/3, sheepSize/10, sheepSize/2);
 
-
     //ears
     pushMatrix();
     translate(sheepSize/2, sheepSize*-0.35);
     fill(240, 197, 133);
     ellipse(0, sheepSize/-3.5, sheepSize/12, sheepSize/6);
-
     popMatrix();
 
     //body
@@ -53,12 +58,7 @@ class Sheep {
     //nose
     fill(216, 86, 11);
     ellipse(sheepSize/4, sheepSize/20, sheepSize/18, sheepSize/18);
-
     popMatrix();
-
-
-
-
     popMatrix();
   }
 

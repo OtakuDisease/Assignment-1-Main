@@ -1,19 +1,20 @@
 class Words {
-  Letters[] letterObjects; //<>//
+  Letters[] letterObjects;
   String word;
   int wordWidth;
-  int x;
-  int y;
-  Words(String initWord, int initX, int initY) { //<>//
+  float x;
+  float y;
+  char c;
+  Words(String initWord, float initX, float initY) {
     word=initWord;
     x=initX;
     y=initY;
     letterObjects= new Letters[word.length()];
     for (int i=0; i<word.length(); i++) {
-      char c= word.charAt(i);
-      wordWidth+=textWidth(c);
-      x+=textWidth(c);
+      c= word.charAt(i);
       letterObjects[i]=new Letters(c, x, y);
+       wordWidth+=textWidth(c);
+      x=x+textWidth(c)+10; //<>//
     }  
   }
   

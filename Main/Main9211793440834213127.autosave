@@ -19,7 +19,7 @@ void setup() {
   wordObjects= new Words[aantalWoorden];
   background= new Background();
   sheep = new Sheep();
-  for (int i=0; i<wordObjects.length; i++) {
+  for (int i=0; i<aantalWoorden; i++) {
     wordObjects[i]= new Words(words[i], random(0,width),random(0,height));
   }
 }
@@ -29,7 +29,6 @@ void draw() {
   sheep.update();
   for (int i=0; i<words.length; i++) {
     wordObjects[i].update();
-    println(i);
   }
 }
 

@@ -1,4 +1,4 @@
-//Everything concerning the words is set in this class, there is also a calling of class Letters
+//Everything concerning the words is set in this class, there is also a calling of class Letters //<>//
 
 class Words {
 
@@ -26,12 +26,10 @@ class Words {
     }
   }
 
-<<<<<<< HEAD
+
   void update(float mouseXPos, float mouseYPos) {
-=======
-  void update() {
     //Showing of the letters
->>>>>>> main
+
     for (int i=0; i<letterObjects.length; i++) {
       if (mouseXPos>letterObjects[0].letterX && mouseXPos<letterObjects[letterObjects.length-1].letterX && mouseYPos>letterObjects[0].letterY-30&& mouseYPos>letterObjects[0].letterY+30) {
         falling=true;

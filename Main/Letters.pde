@@ -4,7 +4,7 @@ class Letters {
 
   //Introducing variables
   float letterX;
-  float letterY;
+  float letterY; //<>//
   float speed;
   float maxY;
   char c;
@@ -17,7 +17,7 @@ class Letters {
     maxY = height/2+200;
   }
 
-  void update() {
+  void updateY() {
     //Make the letters fall down
     if (letterY+speed <maxY) {
       letterY+=speed;

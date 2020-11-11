@@ -20,7 +20,7 @@ void setup() {
   background= new Background();
   sheep = new Sheep();
   for (int i=0; i<wordObjects.length; i++) {
-    wordObjects[i]= new Words(words[i], random(0,width),random(0,height));
+    wordObjects[i]= new Words(words[i], random(0, width), random(0, height));
   }
 }
 void draw() {
@@ -32,6 +32,5 @@ void draw() {
     println(i);
   }
 }
-
-void mouseDragged() {
+void mouseMoved() {
 }

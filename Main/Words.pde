@@ -1,4 +1,4 @@
-class Words {
+class Words { //<>//
   Letters[] letterObjects;
   String word;
   int wordWidth;
@@ -14,7 +14,7 @@ class Words {
       c= word.charAt(i);
       letterObjects[i]=new Letters(c, x, y);
       wordWidth+=textWidth(c);
-      x=x+textWidth(c)+10; //<>//
+      x=x+textWidth(c)+10;
     }
   }
 

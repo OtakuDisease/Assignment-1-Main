@@ -5,6 +5,7 @@ class Letters {
   //Introducing variables
   float letterX;
   float letterY; //<>//
+  float normalHeight;
   float speed;
   float maxY;
   char c;
@@ -14,6 +15,7 @@ class Letters {
   Letters(char initC, float initLetterX, float initLetterY) { 
     letterX = initLetterX;
     letterY = initLetterY;
+    normalHeight=initLetterY;
     c=initC;
     speed = random(1, 3);
     maxY = height/2+200;
@@ -28,10 +30,17 @@ class Letters {
     } else { 
       letterY = maxY;
     }
-    //Make letters move to the left
   }
-  void updateX(){
-  letterX+=-1;
+  void updateX() {
+    //make the letters go to the left
+    letterX+=-1;
+
+    //make the letters wrap around
+    if (letterX<-100) {
+      letterX+=totalSentenceLength+500;
+      letterY=normalHeight;
+    }
+    //Make letters move to the left
   }
 
   void display() {

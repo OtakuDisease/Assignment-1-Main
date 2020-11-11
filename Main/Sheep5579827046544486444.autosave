@@ -4,14 +4,13 @@ class Sheep {
 
   //Introducing variables
   float sheepX, sheepY;
-  float sheepSize, sheepSpeed, sheepHop;
+  float sheepSize, sheepSpeed;
 
-  Sheep(float initX) {
-    sheepX = initX;
+  Sheep() {
+    sheepX=random(0, width);
     sheepY=height/2+height/6;
     sheepSize= width/7;
     sheepSpeed = random(width/800, width/600);
-    sheepHop = 0.8;
   }
 
 
@@ -64,17 +63,11 @@ class Sheep {
   }
 
   void update() {
+    //movement of the sheep
     if (sheepX>width*1.2) {
       sheepX = width*-0.2;
     } else {
-      sheepX += sheepSpeed;  // makes the sheep move from left to right and come back in the screen on the left
-    }
-
-    if (sheepY>height/2+height/10 ) {
-      sheepY -= sheepHop; // makes the sheep hop upwards
-    } 
-    if (sheepY<height/2+height/10+10 || sheepY>height/2+height/5  ) {
-      sheepHop = sheepHop*-1; //makes the sheep land on their feet again
+      sheepX += sheepSpeed;
     }
   }
 }

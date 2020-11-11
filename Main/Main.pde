@@ -7,20 +7,10 @@ Words[] wordObjects;
 PFont font;
 void setup(){
   size(800,800);
-  sketchPath("/data");
-  lines = loadStrings("data/tekst.txt.txt");
-
-  storeText=join(lines," ");
-  words= split(storeText," ");
-
-  for(int i=0;i<words.length;i++){
-  println(words[i]);
-  
-
   font = loadFont("Calibri-48.vlw");
   textFont(font);
-  }
-
+  sketchPath("/data");
+  lines = loadStrings("data/tekst.txt.txt");
   storeText=join(lines," ");
   words= split(storeText," ");
   int aantalWoorden= words.length;

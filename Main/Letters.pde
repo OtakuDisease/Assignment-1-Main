@@ -22,6 +22,7 @@ class Letters {
   }
 
   void display() {
+    fill(255);
     text(c, letterX, letterY);
   }
 }

@@ -17,7 +17,6 @@ void setup() {
   words= split(storeText, " ");
   wordObjects= new Words[words.length];
   background= new Background();
-  sheep = new Sheep();
   wordObjects[0]= new Words(words[0], 50, 100);
   for (int i=1; i<wordObjects.length; i++) {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);

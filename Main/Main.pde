@@ -26,14 +26,7 @@ void setup() {
   lines = loadStrings("data/tekst.txt.txt");
   storeText=join(lines, " ");
   words= split(storeText, " ");
-
-  //Creating new objects
-  wordObjects= new Words[words.length];
-  background= new Background();
-  wordObjects[0]= new Words(words[0], 50, 100);
-  for (int i=1; i<wordObjects.length; i++) {
-    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
-  }
+  drawSentence();
   sheep = new Sheep[2];
   sheep[0] = new Sheep(0);
   sheep[1] = new Sheep(width/2);
@@ -48,6 +41,12 @@ void draw() {
     wordObjects[i].update(mouseX, mouseY);
   }
 }
-void mouseMoved() {
-  
+void drawSentence(){
+  //Creating new objects
+  wordObjects= new Words[words.length];
+  background= new Background();
+  wordObjects[0]= new Words(words[0], 50, 100);
+  for (int i=1; i<wordObjects.length; i++) {
+    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
+  }
 }

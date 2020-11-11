@@ -27,7 +27,6 @@ void setup() {
   lines = loadStrings("data/tekst.txt.txt");
   storeText=join(lines, " ");
   words= split(storeText, " ");
-  wordObjects= new Words[words.length];
   drawSentence();
   sheep = new Sheep[2];
   sheep[0] = new Sheep(0);
@@ -44,18 +43,18 @@ void draw() {
   }
 }
 void drawSentence() {
+  //reset and make the wordObject array;
+  wordObjects= new Words[words.length];
   //Creating new objects
   background= new Background();
   wordObjects[0]= new Words(words[0], 100, 200);
+  //make for every wordObject a word and calculate the total sentence width
   for (int i=1; i<wordObjects.length; i++) {
     wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
     totalSentenceLength+=wordObjects[i].wordWidth;
   }
-  wordObjects[0]= new Words(words[0], 50, 200);
-  for (int i=1; i<wordObjects.length; i++) {
-    wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);
-  }
 }
+
 void keyPressed() {
   if (keyCode == UP){
   scramble();

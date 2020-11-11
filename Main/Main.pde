@@ -9,10 +9,10 @@ void setup(){
   size(800,800);
   sketchPath("/data");
   lines = loadStrings("data/tekst.txt.txt");
-  c = lines[0].charAt(8);
+
   storeText=join(lines," ");
   words= split(storeText," ");
-  c = lines[0].charAt(3);
+
   for(int i=0;i<words.length;i++){
   println(words[i]);
   

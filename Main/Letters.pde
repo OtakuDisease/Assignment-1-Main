@@ -1,10 +1,15 @@
+//In this class everything concerning the letters is made.
+
 class Letters {
+
+  //Introducing variables
   float letterX;
   float letterY;
   float speed;
   float maxY;
   char c;
-  Letters(char initC, float initLetterX, float initLetterY) { //<>// //<>//
+
+  Letters(char initC, float initLetterX, float initLetterY) { 
     letterX = initLetterX;
     letterY = initLetterY;
     c=initC;
@@ -13,11 +18,13 @@ class Letters {
   }
 
   void update() {
+    //Make the letters fall down
     if (letterY+speed <maxY) {
       letterY+=speed;
     } else { 
       letterY = maxY;
     }
+    //Make letters move to the left
     letterX+=-1;
   }
 

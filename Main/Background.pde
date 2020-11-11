@@ -1,4 +1,8 @@
+//This is a class where the background of our animated card is created
+
 class  Background {
+
+  //Introducing variables
   int backgroundX, backgroundY;
 
   Background() {
@@ -14,8 +18,6 @@ class  Background {
     fill(26, 160, 19);
     noStroke();
     rect(0, backgroundY, width, backgroundY);
-
-
     popMatrix();
   }
 }

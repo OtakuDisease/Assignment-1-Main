@@ -21,7 +21,6 @@ class Words {
   for (int i=0; i<letterObjects.length; i++) {
     letterObjects[i].update();
     letterObjects[i].display();
-    
   }
   }
 }

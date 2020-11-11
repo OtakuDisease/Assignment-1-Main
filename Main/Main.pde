@@ -27,10 +27,6 @@ void draw() {
   background.display();
   sheep.display();
   sheep.update();
-  text(lines[0], 100, 100);
-  for (int i = 0; i<= 3; i++) {
-    text(lines[i], 100, 100+40*i);
-  }
   for (int i=0; i<words.length; i++) {
     wordObjects[i].update();
   }

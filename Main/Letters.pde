@@ -37,13 +37,13 @@ class Letters {
     //make the letters go to the left
     letterX+=-1;
   }
-
+//show the letters according to size
   void display() {
     fill(255);
     textSize(mySize);
     text(c, letterX, letterY);
   }
-
+//give this letter a new random size
   void textResize() {
     mySize=int(random(letterSizeMin, letterSizeMax));
   }

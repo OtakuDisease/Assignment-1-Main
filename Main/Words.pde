@@ -25,7 +25,7 @@ class Words {
       x=x+textWidth(c);
     }
   }
-
+//update the letters and if they are hovered over make their word fall.
   void update(float mouseXPos, float mouseYPos) {
     for (int i=0; i<letterObjects.length; i++) {   
       if (mouseXPos>letterObjects[0].letterX && mouseXPos<letterObjects[letterObjects.length-1].letterX && mouseYPos<letterObjects[0].letterY+10&&mouseYPos>letterObjects[0].letterY-50) {
@@ -46,12 +46,12 @@ class Words {
       letterObjects[i].letterY=y;
       falling=false;
     }
-    
+    //move the letters to the left and show them
       letterObjects[i].updateX();
       letterObjects[i].display();
     }
   }
-
+//resize all the letters of this word
   void textResize() {
     for (int i=0; i<word.length(); i++) {
       letterObjects[i].textResize();

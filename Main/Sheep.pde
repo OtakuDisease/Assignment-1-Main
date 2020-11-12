@@ -1,7 +1,6 @@
 //the sheeps and their interactions are created in this class.
 
 class Sheep {
-
   //Introducing variables
   float sheepX, sheepY;
   float sheepSize, sheepSpeed, sheepHop;

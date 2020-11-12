@@ -55,6 +55,8 @@ void keyPressed() {
 }
 
 void drawSentence() {
+  //reset the physical(pixel) length of the sentence
+  totalSentenceLength=0;
   //reset and make the wordObject array;
   wordObjects= new Words[words.length];
   //Creating new objects

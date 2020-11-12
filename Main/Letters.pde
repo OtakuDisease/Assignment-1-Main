@@ -12,7 +12,6 @@ class Letters {
   float letterSizeMin;
   float letterSizeMax;
   int mySize;
-  
   Letters(char initC, float initLetterX, float initLetterY) { 
     letterX = initLetterX;
     letterY = initLetterY;
@@ -37,11 +36,6 @@ class Letters {
   void updateX() {
     //make the letters go to the left
     letterX+=-1;
-    //make the letters wrap around
-    if (letterX+20<0) {
-      letterX+=totalSentenceLength+350;
-      letterY=normalHeight;
-    }
   }
 
   void display() {

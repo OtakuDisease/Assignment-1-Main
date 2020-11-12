@@ -1,10 +1,11 @@
-/* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
+/* This is assignment 1 of group 5 of Programming & Physical Computing //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
  
  Program Description:
  This program is made to show an animated greeding card.
- You will be able to scroll through the letters, let the letters drop when hovering over them and watch hopping sheeps.*/
+ You will be able to scroll through the letters, let the letters drop when hovering over them and watch hopping sheeps.
+ You can rearrange the words in the sentence by useing the down arrow and rearrange the words in your sentence randomly by clicking the up arrow*/
 
 //Introducing variables
 String[] lines;

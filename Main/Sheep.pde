@@ -13,9 +13,7 @@ class Sheep {
     sheepHop = 0.8;
   }
 
-
   void display() {
-
     //Matrix for general sheep  
     pushMatrix();
     translate(sheepX, sheepY);

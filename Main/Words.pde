@@ -48,7 +48,12 @@ class Words {
     }
     //move the letters to the left and show them
       letterObjects[i].updateX();
-      letterObjects[i].display();
+      
+    }
+  }
+  void show(){
+    for (int i=0; i<word.length(); i++) {
+        letterObjects[i].display();
     }
   }
 //resize all the letters of this word

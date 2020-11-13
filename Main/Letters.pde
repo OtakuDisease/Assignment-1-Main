@@ -1,10 +1,10 @@
-//In this class everything concerning the letters is made. //<>//
+//In this class everything concerning the letters is made. //<>// //<>//
 
 class Letters {
 
   //Introducing variables
   float letterX;
-  float letterY; //<>//
+  float letterY;
   float normalHeight;
   float speed;
   float maxY;
@@ -32,18 +32,18 @@ class Letters {
       letterY = maxY;
     }
   }
-  
+
   void updateX() {
     //make the letters go to the left
     letterX+=-1;
   }
-//show the letters according to size
+  //show the letters according to size
   void display() {
     fill(255);
     textSize(mySize);
     text(c, letterX, letterY);
   }
-//give this letter a new random size
+  //give this letter a new random size
   void textResize() {
     mySize=int(random(letterSizeMin, letterSizeMax));
   }

@@ -25,7 +25,7 @@ class Words {
       x=x+textWidth(c);
     }
   }
-//update the letters and if they are hovered over make their word fall.
+  //update the letters and if they are hovered over make their word fall.
   void update(float mouseXPos, float mouseYPos) {
     for (int i=0; i<letterObjects.length; i++) {   
       if (mouseXPos>letterObjects[0].letterX && mouseXPos<letterObjects[letterObjects.length-1].letterX && mouseYPos<letterObjects[0].letterY+10&&mouseYPos>letterObjects[0].letterY-50) {
@@ -35,28 +35,27 @@ class Words {
         letterObjects[i].updateY();
       }
       //make the letters wrap around
-    if (letterObjects[i].letterX+20<0) {
-      int offset=totalSentenceLength+350;
-      //make the letters always appear just right outside te window
-      if(offset<width){
-      letterObjects[i].letterX+=width;
+      if (letterObjects[i].letterX+20<0) {
+        int offset=totalSentenceLength+350;
+        //make the letters always appear just right outside te window
+        if (offset<width) {
+          letterObjects[i].letterX+=width;
+        }
+        letterObjects[i].letterX+=totalSentenceLength+350;
+        //reset the y and if the word is falling
+        letterObjects[i].letterY=y;
+        falling=false;
       }
-      letterObjects[i].letterX+=totalSentenceLength+350;
-      //reset the y and if the word is falling
-      letterObjects[i].letterY=y;
-      falling=false;
-    }
-    //move the letters to the left and show them
+      //move the letters to the left and show them
       letterObjects[i].updateX();
-      
     }
   }
-  void show(){
+  void show() {
     for (int i=0; i<word.length(); i++) {
-        letterObjects[i].display();
+      letterObjects[i].display();
     }
   }
-//resize all the letters of this word
+  //resize all the letters of this word
   void textResize() {
     for (int i=0; i<word.length(); i++) {
       letterObjects[i].textResize();

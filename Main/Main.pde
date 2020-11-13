@@ -63,7 +63,7 @@ void keyPressed() {
   }
 }
 
-void mouseMoved(){
- ourMouseX=mouseX;
- ourMouseY=mouseY;
+void mouseMoved() {
+  ourMouseX=mouseX;
+  ourMouseY=mouseY;
 }

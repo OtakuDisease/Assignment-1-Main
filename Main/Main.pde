@@ -19,9 +19,10 @@ Words[] wordObjects;
 Background background;
 Sheep[] sheep;
 DrawWords wordsDraw;
+
 void setup() {
-  wordsDraw= new DrawWords(); 
   //Sketch settings
+  wordsDraw= new DrawWords(); 
   size(800, 800);
   font = loadFont("Calibri-48.vlw");
   textFont(font);
@@ -61,6 +62,7 @@ void keyPressed() {
     }
   }
 }
+
 void mouseMoved(){
  ourMouseX=mouseX;
  ourMouseY=mouseY;

@@ -75,6 +75,6 @@ class Sheep {
       sheepHop = sheepHop*-1; //makes the sheep land on their feet again
     }
   }
-  void shout(float tempMouseX, float tempMouseY){
+  void shout(float tempMouseX, float tempMouseY) {
   }
 }

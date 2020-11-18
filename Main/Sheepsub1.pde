@@ -5,9 +5,9 @@ class Sheep1 extends Sheep {
   }
 
 
-void shout(float tempMouseX, float tempMouseY) {
-  if ((tempMouseX <= sheepX+100) && (tempMouseX >= sheepX-100) && (tempMouseY <=sheepY+100) && (tempMouseY >= sheepY-100)) {
-    beeh.play();
+  void shout(float tempMouseX, float tempMouseY) {
+    if ((tempMouseX <= sheepX+100) && (tempMouseX >= sheepX-100) && (tempMouseY <=sheepY+100) && (tempMouseY >= sheepY-100)) {
+      beeh.play();
+    }
   }
-}
 }

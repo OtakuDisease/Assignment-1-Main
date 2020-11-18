@@ -1,22 +1,22 @@
 class EvenLetters extends Letters {
-color myColor;
-EvenLetters(char initC, float initLetterX, float initLetterY, int textColor){
-super(initC, initLetterX, initLetterY);
-this.myColor=textColor;
-}
+  color myColor;
+  EvenLetters(char initC, float initLetterX, float initLetterY, int textColor) {
+    super(initC, initLetterX, initLetterY);
+    this.myColor=textColor;
+  }
 
-void display(){
-pushMatrix();
+  void display() {
+    pushMatrix();
     float middleX=letterX+(textWidth(c)/2);
     float middleY=letterY-(textWidth(c)/3);
-    translate(middleX,middleY); 
+    translate(middleX, middleY); 
     rotate(radians(degrees));
     fill(rainbow.c); // has to be rainbow
     textSize(mySize);
     text(c, 0-(textWidth(c)/2), 0+(textWidth(c)/3));
     popMatrix();
-}
- void rotateLetter(){
-  degrees+=6;
+  }
+  void rotateLetter() {
+    degrees+=6;
   }
 }

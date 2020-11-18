@@ -1,4 +1,4 @@
-//In this class everything concerning the letters is made. //<>// //<>// //<>// //<>//
+//In this class everything concerning the letters is made. //<>// //<>// //<>// //<>// //<>//
 
 class Letters {
 
@@ -35,10 +35,10 @@ class Letters {
       letterY = maxY;
     }
   }
-  void rotateLetter(){
+  void rotateLetter() {
   }
   void updateX() {
-      //make the letters go to the left
+    //make the letters go to the left
     letterX+=-1;
   }
 

@@ -15,7 +15,6 @@ class Rainbow {
     image(img, 0, imageY, width, imageHeight);
     loadPixels();
     img.loadPixels();
-    
   }
 
   void update(float mouseXPos, float mouseYPos) {

@@ -77,7 +77,7 @@ class Sheep {
     
   }
   void shout(float tempMouseX, float tempMouseY){
-  if ((tempMouseX <= sheepX+50) && (tempMouseX >= sheepX-50) && (tempMouseY <=sheepY+50) && (tempMouseY >= sheepY-50)) {
+  if ((tempMouseX <= sheepX+100) && (tempMouseX >= sheepX-100) && (tempMouseY <=sheepY+100) && (tempMouseY >= sheepY-100)) {
   file.play();
 }
   }

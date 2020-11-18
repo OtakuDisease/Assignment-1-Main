@@ -1,4 +1,4 @@
-import processing.sound.*; //<>// //<>// //<>// //<>// //<>//
+import processing.sound.*; //<>// //<>// //<>// //<>//
 /* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
@@ -26,6 +26,7 @@ SoundFile file;
 Rainbow rainbow;
 void setup() {
   file = new SoundFile(this, "Sheep-Lamb-Bah.mp3");
+  file.play();
   //Sketch settings
   wordsDraw= new DrawWords(); 
   size(800, 800);
@@ -37,11 +38,10 @@ void setup() {
   words= split(storeText, " ");
   wordsDraw.drawSentence();
   sheep = new Sheep[2];
-  //rainbow = new Rainbow();
-
+  rainbow = new Rainbow();
+ 
   for (int i=0; i<sheep.length; i++) {
-    sheep[0]= new Sheep1(i);
-    sheep[1]= new Sheep2(i);
+    sheep[i] = new Sheep(i);
   }
   background= new Background();
 }
@@ -49,8 +49,7 @@ void setup() {
 void draw() {
   background.display();
   rainbow.display();
-  rainbow.update(int(ourMouseX), int(ourMouseY));
-  for (int i=0; i<sheep.length; i++) {
+    for (int i=0; i<sheep.length; i++) {
     sheep[i].display();
     sheep[i].update();
   }
@@ -77,7 +76,7 @@ void mouseMoved() {
 }
 
 void mouseClicked() {
-  for (int i=0; i<sheep.length; i++) {
-    sheep[1].shout(mouseX, mouseY);
+  for(int i=0; i<sheep.length; i++){
+   sheep[i].shout(mouseX, mouseY); 
   }
 }

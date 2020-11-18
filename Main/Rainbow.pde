@@ -1,27 +1,27 @@
 class Rainbow{
 PImage img;
  int x, y;
-
+color c;
 
 Rainbow(){
   img = loadImage("rainbow.png");
-  //loadPixels();
-  //img.loadPixels();
-  x = 10;
-  y= 20;
-
    
 }
 
 void display(){
   image(img,0,height/18,width,height/5);
-  //loadPixels();
-  //img.loadPixels();
-  int loc = x + y*5000;
+  loadPixels();
+  img.loadPixels();
+  
+}
 
- color c = img.pixels[loc];
-
-  fill (c);
-  ellipse(x,y,20,30);
+void update(float mouseXPos, float mouseYPos){
+  if(mouseYPos<height/5 && mouseYPos >height/18){
+ float loc = mouseXPos + mouseYPos*width-height/18;
+  c = img.pixels[int(loc)];
+   fill (c);
+  ellipse(200,100,20,30);
+  println(mouseXPos,mouseYPos);
+  }
 }
 }

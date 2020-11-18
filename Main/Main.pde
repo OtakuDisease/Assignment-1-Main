@@ -49,7 +49,7 @@ void setup() {
 void draw() {
   background.display();
   rainbow.display();
-  rainbow.update(int(ourMouseX), int(ourMouseY));
+  rainbow.update(ourMouseX, ourMouseY);
   for (int i=0; i<sheep.length; i++) {
     sheep[i].display();
     sheep[i].update();

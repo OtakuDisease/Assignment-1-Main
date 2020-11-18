@@ -26,7 +26,6 @@ SoundFile file;
 Rainbow rainbow;
 void setup() {
   file = new SoundFile(this, "Sheep-Lamb-Bah.mp3");
-  file.play();
   //Sketch settings
   wordsDraw= new DrawWords(); 
   size(800, 800);

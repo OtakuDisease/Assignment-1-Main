@@ -7,9 +7,8 @@ class Rainbow {
   Rainbow() {
     img = loadImage("rainbow.png");
     imageHeight=height/5;
-    //imageY=height/18;
-    imageY=0;
-    c=color(200, 30, 40);
+    imageY=height/18;
+        c=color(200, 30, 40);
   }
 
   void display() {
@@ -26,5 +25,6 @@ class Rainbow {
       fill (c);
       ellipse(width/2, height/2, 20, 30);
     }
+
   }
 }

@@ -5,8 +5,6 @@ class Sheep1 extends Sheep {
   }
 }
 
-void sound(int tempMouseX, int tempMouseY){
-  if ((tempMouseX <= sheepX+50) && (tempMouseX >= sheepX-50) && (tempMouseY <=sheepY+50) && (tempMouseY >= sheepY-50)) {
+void beeeh(){
   file.play();
-}
 }

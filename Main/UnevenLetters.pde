@@ -1,9 +1,10 @@
 class EvenLetters extends Letters {
-  color myColor;
+color myColor;
 EvenLetters(char initC, float initLetterX, float initLetterY, int textColor){
 super(initC, initLetterX, initLetterY);
 this.myColor=textColor;
 }
+
 void display(){
 pushMatrix();
     float middleX=letterX+(textWidth(c)/2);

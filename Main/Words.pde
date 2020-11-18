@@ -1,4 +1,4 @@
-//Everything concerning the words is set in this class, there is also a calling of class Letters //<>// //<>// //<>//
+//Everything concerning the words is set in this class, there is also a calling of class Letters //<>// //<>// //<>// //<>//
 
 class Words {
 
@@ -21,9 +21,9 @@ class Words {
     for (int i=0; i<word.length(); i++) {
       c= word.charAt(i);
       if(i%2==0){
-      letterObjects[i]=new EvenLetters(c, x, y, 0);
+      letterObjects[i]=new EvenLetters(c, x, y, 255);
       }else{
-      letterObjects[i]=new UnevenLetters(c, x, y, 255);
+      letterObjects[i]=new UnevenLetters(c, x, y, 0);
       }
       wordWidth+=textWidth(c);
       x=x+textWidth(c);

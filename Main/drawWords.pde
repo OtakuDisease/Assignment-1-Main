@@ -6,7 +6,7 @@ class DrawWords {
     //reset and make the wordObject array;
     wordObjects= new Words[words.length];
     //Creating new objects
-    wordObjects[0]= new Words(words[0], 100, 200);
+    wordObjects[0]= new Words(words[0], 100, 350);
     //make for every wordObject a word and calculate the total sentence width
     for (int i=1; i<wordObjects.length; i++) {
       wordObjects[i]= new Words(words[i], wordObjects[i-1].x+10, wordObjects[i-1].y);

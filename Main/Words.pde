@@ -33,6 +33,7 @@ class Words {
       }
       if (falling) {
         letterObjects[i].updateY();
+        letterObjects[i].rotateLetter();
       }
       //make the letters wrap around
       if (letterObjects[i].letterX+20<0) {
@@ -45,6 +46,7 @@ class Words {
         //reset the y and if the word is falling
         letterObjects[i].letterY=y;
         falling=false;
+        letterObjects[i].degrees=0;
       }
       //move the letters to the left and show them
       letterObjects[i].updateX();

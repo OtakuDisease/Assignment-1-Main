@@ -74,14 +74,7 @@ class Sheep {
     if (sheepY<height/2+height/10+10 || sheepY>height/2+height/5  ) {
       sheepHop = sheepHop*-1; //makes the sheep land on their feet again
     }
-    
   }
   void shout(float tempMouseX, float tempMouseY){
-  if ((tempMouseX <= sheepX+100) && (tempMouseX >= sheepX-100) && (tempMouseY <=sheepY+100) && (tempMouseY >= sheepY-100)) {
-  file.play();
-}
-  }
-  void beeeh(){
-  
   }
 }

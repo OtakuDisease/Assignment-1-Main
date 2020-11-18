@@ -1,4 +1,4 @@
-//In this class everything concerning the letters is made. //<>// //<>//
+//In this class everything concerning the letters is made. //<>// //<>// //<>//
 
 class Letters {
 
@@ -36,24 +36,15 @@ class Letters {
     }
   }
   void rotateLetter(){
-  degrees+=6;
   }
   void updateX() {
-
-    //make the letters go to the left
+      //make the letters go to the left
     letterX+=-1;
-    
   }
 
   //show the letters according to size
   void display() {
-    pushMatrix();
-    translate(letterX,letterY);
-    rotate(radians(degrees));
-    fill(255);
-    textSize(mySize);
-    text(c, 0, 0);
-    popMatrix();
+    
   }
 
   //give this letter a new random size

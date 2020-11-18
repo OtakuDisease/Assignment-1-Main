@@ -27,6 +27,7 @@ class Letters {
   }
 
   void updateY() {
+
     //Make the letters fall down
     if (letterY+speed<maxY) {
       letterY+=speed;
@@ -38,10 +39,12 @@ class Letters {
   degrees+=6;
   }
   void updateX() {
+
     //make the letters go to the left
     letterX+=-1;
     
   }
+
   //show the letters according to size
   void display() {
     pushMatrix();
@@ -52,6 +55,7 @@ class Letters {
     text(c, 0, 0);
     popMatrix();
   }
+
   //give this letter a new random size
   void textResize() {
     mySize=int(random(letterSizeMin, letterSizeMax));

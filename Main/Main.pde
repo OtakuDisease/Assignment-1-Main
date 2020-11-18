@@ -1,4 +1,4 @@
-import processing.sound.*; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+import processing.sound.*; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 /* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
@@ -39,7 +39,7 @@ void setup() {
   words= split(storeText, " ");
   wordsDraw.drawSentence();
   sheep = new Sheep[2];
-  //rainbow = new Rainbow();
+  rainbow = new Rainbow();
 
   for (int i=0; i<sheep.length; i++) {
     sheep[0]= new Sheep1(i);

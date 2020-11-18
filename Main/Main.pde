@@ -1,4 +1,4 @@
-/* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
+/* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>// //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
  
@@ -14,6 +14,7 @@ String[] words;
 PFont font;
 int totalSentenceLength;
 float ourMouseX, ourMouseY;
+
 //Reference classes
 Words[] wordObjects;
 Background background;
@@ -21,6 +22,7 @@ Sheep[] sheep;
 DrawWords wordsDraw;
 
 void setup() {
+
   //Sketch settings
   wordsDraw= new DrawWords(); 
   size(800, 800);
@@ -35,7 +37,7 @@ void setup() {
 
   for (int i=0; i<sheep.length; i++) {
     sheep[i] = new Sheep(i);
-    }
+  }
   background= new Background();
 }
 

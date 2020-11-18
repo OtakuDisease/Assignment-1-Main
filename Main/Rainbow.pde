@@ -25,5 +25,6 @@ class Rainbow {
       fill (c);
       ellipse(width/2, height/2, 20, 30);
     }
+
   }
 }

@@ -1,0 +1,71 @@
+/* This is assignment 1 of group 5 of Programming & Physical Computing //<>//
+ by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
+ 11-11-2020
+ 
+ Program Description:
+ This program is made to show an animated greeding card.
+ You will be able to scramble the words in the sentence by pressing the up-arrowkey, give every letter a random size by pressing the down-arrowkey,
+ let the words drop when hovering over them and watch hopping sheeps.*/
+
+//Introducing variables
+String[] lines;
+String storeText;
+String[] words;
+PFont font;
+int totalSentenceLength;
+float ourMouseX, ourMouseY;
+//Reference classes
+Words[] wordObjects;
+Background background;
+Sheep[] sheep;
+DrawWords wordsDraw;
+PImage img;
+
+void setup() {
+  //Sketch settings
+  img= loadImage("rainbow.png");
+  wordsDraw= new DrawWords(); 
+  size(800, 800);
+  font = loadFont("Calibri-48.vlw");
+  textFont(font);
+  sketchPath("/data");
+  lines = loadStrings("data/tekst.txt.txt");
+  storeText=join(lines, " ");
+  words= split(storeText, " ");
+  wordsDraw.drawSentence();
+  sheep = new Sheep[2];
+
+  for (int i=0; i<sheep.length; i++) {
+    sheep[i] = new Sheep(i);
+    }
+  background= new Background();
+}
+
+void draw() {
+  background.display();
+  image(img,0,height/20,width,height/5);
+  for (int i=0; i<sheep.length; i++) {
+    sheep[i].display();
+    sheep[i].update();
+  }
+  for (int i=0; i<words.length; i++) {
+    wordObjects[i].show();
+    wordObjects[i].update(ourMouseX, ourMouseY);
+  }
+}
+
+void keyPressed() {
+  if (keyCode == UP) {
+    wordsDraw.scramble();
+  }
+  if (keyCode == DOWN) {
+    for (int i=0; i<wordObjects.length; i++) {
+      wordObjects[i].textResize();
+    }
+  }
+}
+
+void mouseMoved() {
+  ourMouseX=mouseX;
+  ourMouseY=mouseY;
+}

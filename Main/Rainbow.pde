@@ -3,7 +3,8 @@ class Rainbow {
   color c;
   int imageHeight;
   int imageY;
-
+  float mouseXPos;
+  float mouseYPos;
   Rainbow() {
     img = loadImage("rainbow.png"); //loads the image
     imageHeight=height/5;
@@ -16,10 +17,19 @@ class Rainbow {
     loadPixels();
   }
 
-  void update(float mouseXPos, float mouseYPos) {
-    if (mouseYPos<imageHeight+imageY && mouseYPos>imageY) { //if the mouse is in these parameters then:
+  void update(float initMouseXPos, float initMouseYPos) {
+    mouseXPos=initMouseXPos;
+    mouseYPos=initMouseYPos;
+    if (isOverRainbow()) { //if the mouse is in these parameters then:
       int loc = floor(mouseXPos) + (floor(mouseYPos)-1)*width; //gets the location of the pixels
       c = pixels[loc]; //changes the color to the color of the pixel location
     }
+  }
+  boolean isOverRainbow() {
+    boolean isOver=false;
+    if (mouseYPos<imageHeight+imageY && mouseYPos>imageY) { //if the mouse is in these parameters then:
+      isOver=true;
+    }
+    return isOver;
   }
 }

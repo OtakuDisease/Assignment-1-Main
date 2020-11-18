@@ -37,17 +37,19 @@ class Sheep {
 
     //body
     fill(255);
+    if (rainbow.isOverRainbow()) {
+      fill(rainbow.c);
+    }
     ellipse(0, sheepSize*-0.05, sheepSize/1.2, sheepSize/1.2);
     rect(0, 0, sheepSize*1.2, sheepSize/2, sheepSize*4);
 
-    //tail
-    ellipse(sheepSize/-1.7, sheepSize/-10, sheepSize/8, sheepSize/8);
-
     //head
-    fill(255);
     ellipse(sheepSize/2, sheepSize*-0.35, sheepSize/2, sheepSize/2);
     fill(240, 197, 133);
     ellipse(sheepSize/1.8, sheepSize*-0.35, sheepSize/2.5, sheepSize/2.5);
+
+    //tail
+    ellipse(sheepSize/-1.7, sheepSize/-10, sheepSize/8, sheepSize/8);
 
     //eye
     pushMatrix();

@@ -14,10 +14,13 @@ class EvenLetters extends Letters {
     float middleY=letterY-(textWidth(c)/3);
     translate(middleX, middleY); 
     rotate(radians(degrees));
-    fill(rainbow.c); // makes the letters rainbow
+    fill(myColor); // makes the letters rainbow
     textSize(mySize);
     text(c, 0-(textWidth(c)/2), 0+(textWidth(c)/3));
     popMatrix();
+  }
+  void updateColor() {
+    myColor=rainbow.c;
   }
   void rotateLetter() {
     degrees+=6;

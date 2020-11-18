@@ -83,4 +83,7 @@ void mouseClicked() {
     sheep[0].shout(mouseX, mouseY);
     sheep[1].shout(mouseX, mouseY);
   }
+  for (int i=0; i<wordObjects.length; i++) {
+    wordObjects[i].updateColor();
+  }
 }

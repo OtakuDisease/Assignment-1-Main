@@ -45,7 +45,8 @@ class Letters {
   //show the letters according to size
   void display() {
   }
-
+  void updateColor() {
+  }
   //give this letter a new random size
   void textResize() {
     mySize=int(random(letterSizeMin, letterSizeMax));

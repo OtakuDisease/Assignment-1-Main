@@ -72,4 +72,9 @@ class Words {
       letterObjects[i].textResize();
     }
   }
+  void updateColor() {
+    for (int i=0; i<word.length(); i++) {
+      letterObjects[i].updateColor();
+    }
+  }
 }

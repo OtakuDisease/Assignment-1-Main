@@ -1,4 +1,4 @@
-//Everything concerning the words is set in this class, there is also a calling of class Letters //<>// //<>//
+//Everything concerning the words is set in this class, there is also a calling of class Letters //<>// //<>// //<>//
 
 class Words {
 
@@ -38,7 +38,6 @@ class Words {
       }
       if (falling) {
         letterObjects[i].updateY();
-        letterObjects[i].rotateLetter();
       }
 
       //make the letters wrap around

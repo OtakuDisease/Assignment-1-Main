@@ -6,11 +6,13 @@ this.myColor=textColor;
 }
 void display(){
 pushMatrix();
-    translate(letterX,letterY);
+    float middleX=letterX+(textWidth(c)/2);
+    float middleY=letterY-(textWidth(c)/3);
+    translate(middleX,middleY); 
     rotate(radians(degrees));
     fill(myColor);
     textSize(mySize);
-    text(c, 0, 0);
+    text(c, 0-(textWidth(c)/2), 0+(textWidth(c)/3));
     popMatrix();
 }
  void rotateLetter(){

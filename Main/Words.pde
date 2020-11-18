@@ -1,4 +1,4 @@
-//Everything concerning the words is set in this class, there is also a calling of class Letters //<>// //<>//
+//Everything concerning the words is set in this class, there is also a calling of class Letters //<>// //<>// //<>//
 
 class Words {
 

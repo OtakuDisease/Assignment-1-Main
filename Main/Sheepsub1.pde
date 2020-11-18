@@ -12,4 +12,11 @@ class Sheep1 extends Sheep {
       beeh.play();
     }
   }
+  void updateColor() {
+    if (rainbow.isOverRainbow()) {
+      sheepColor=color(255-red(rainbow.c), 255-green(rainbow.c), 255-blue(rainbow.c));
+    } else {
+      sheepColor=255;
+    }
+  }
 }

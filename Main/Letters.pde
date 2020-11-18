@@ -45,7 +45,7 @@ class Letters {
   //show the letters according to size
   void display() {
   }
-  void updateColor() {
+  void updateColor(boolean falling) {
   }
   //give this letter a new random size
   void textResize() {

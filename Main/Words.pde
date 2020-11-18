@@ -74,7 +74,7 @@ class Words {
   }
   void updateColor() {
     for (int i=0; i<word.length(); i++) {
-      letterObjects[i].updateColor();
+      letterObjects[i].updateColor(falling);
     }
   }
 }

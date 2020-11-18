@@ -13,4 +13,11 @@ class Sheep2 extends Sheep {
       buuh.play();
     }
   }
+   void updateColor() {
+    if (rainbow.isOverRainbow()) {
+      sheepColor=rainbow.c;
+    } else {
+      sheepColor=0;
+    }
+  }
 }

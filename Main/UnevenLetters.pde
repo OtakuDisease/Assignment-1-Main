@@ -19,8 +19,10 @@ class EvenLetters extends Letters {
     text(c, 0-(textWidth(c)/2), 0+(textWidth(c)/3));
     popMatrix();
   }
-  void updateColor() {
-    myColor=rainbow.c;
+  void updateColor(boolean falling) {
+    if (!falling) {
+      myColor=rainbow.c;
+    }
   }
   void rotateLetter() {
     degrees+=6;

@@ -5,13 +5,14 @@ class Sheep {
   //Introducing variables
   float sheepX, sheepY;
   float sheepSize, sheepSpeed, sheepHop;
-
+  color sheepColor;
   Sheep(int i) {
     sheepX = i*width/2;
     sheepY=height/2+height/6;
     sheepSize= width/7;
     sheepSpeed = random(width/800, width/600);
     sheepHop = 0.8;
+    sheepColor=0;
   }
 
   void display() {
@@ -37,9 +38,7 @@ class Sheep {
 
     //body
     fill(255);
-    if (rainbow.isOverRainbow()) {
-      fill(rainbow.c);
-    }
+    fill(sheepColor);
     ellipse(0, sheepSize*-0.05, sheepSize/1.2, sheepSize/1.2);
     rect(0, 0, sheepSize*1.2, sheepSize/2, sheepSize*4);
 
@@ -77,7 +76,8 @@ class Sheep {
       sheepHop = sheepHop*-1; //makes the sheep land on their feet again
     }
   }
-
+  void updateColor() {
+  }
   //method for the sheeps to make noise, this is the method in the super which lets the subclasses use this method.
   void shout(float tempMouseX, float tempMouseY) {
   }

@@ -55,6 +55,7 @@ void draw() {
   for (int i=0; i<sheep.length; i++) {
     sheep[i].display();
     sheep[i].update();
+    sheep[i].updateColor();
   }
   for (int i=0; i<words.length; i++) {
     wordObjects[i].show();

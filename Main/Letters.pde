@@ -1,7 +1,5 @@
-//In this class everything concerning the letters is made. //<>// //<>// //<>// //<>// //<>//
-
+//In this class everything concerning the letters is made. //<>//
 class Letters {
-
   //Introducing variables
   float letterX;
   float letterY;
@@ -25,7 +23,7 @@ class Letters {
     mySize=50;
     degrees=0;
   }
-
+  //update the y position and rotation when of the ground (called only when falling)
   void updateY() {
     //Make the letters fall down
     if (letterY+speed<maxY) {
@@ -35,20 +33,20 @@ class Letters {
       letterY = maxY;
     }
   }
-  void rotateLetter() {
-  }
   void updateX() {
     //make the letters go to the left
     letterX+=-1;
   }
+  //give this letter a new random size
+  void textResize() {
+    mySize=int(random(letterSizeMin, letterSizeMax));
+  }
 
-  //show the letters according to size
+  //make the voids so they can be called in the subclasses (dummy methods)
   void display() {
   }
   void updateColor(boolean falling) {
   }
-  //give this letter a new random size
-  void textResize() {
-    mySize=int(random(letterSizeMin, letterSizeMax));
+  void rotateLetter() {
   }
 }

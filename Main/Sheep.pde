@@ -1,7 +1,5 @@
 //the sheeps and their interactions are created in this class.
-
 class Sheep {
-
   //Introducing variables
   float sheepX, sheepY;
   float sheepSize, sheepSpeed, sheepHop;
@@ -9,7 +7,7 @@ class Sheep {
   float gravity;
   float dY;
   Sheep(int i) {
-    sheepX = i*width/2;
+    sheepX = i*(width/amountSheep);
     sheepY=height/2+height/6;
     sheepSize= width/7;
     sheepSpeed = random(width/800, width/600);
@@ -66,6 +64,7 @@ class Sheep {
     popMatrix();
     popMatrix();
   }
+
   void update() {
     if (sheepX>width*1.2) {
       sheepX = width*-0.2;

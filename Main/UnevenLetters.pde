@@ -7,7 +7,7 @@ class EvenLetters extends Letters {
     super(initC, initLetterX, initLetterY);
     this.myColor=textColor;
   }
-
+  //display the letters at the right place and rotation
   void display() {
     pushMatrix();
     float middleX=letterX+(textWidth(c)/2);
@@ -19,11 +19,13 @@ class EvenLetters extends Letters {
     text(c, 0-(textWidth(c)/2), 0+(textWidth(c)/3));
     popMatrix();
   }
+  //if the letter is not falling update its color when the mouse is clicked over the rainbow
   void updateColor(boolean falling) {
     if (!falling) {
       myColor=rainbow.c;
     }
   }
+  //make the letter rotate when it is falling
   void rotateLetter() {
     degrees+=6;
   }

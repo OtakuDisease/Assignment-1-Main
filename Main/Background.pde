@@ -10,7 +10,7 @@ class  Background {
     backgroundY= height/2;
     rectMode(CENTER);
   }
-
+  //draw the background
   void display() {
     background(5, 195, 245);
     pushMatrix();

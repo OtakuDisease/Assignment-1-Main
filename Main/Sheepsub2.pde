@@ -1,10 +1,8 @@
 //subclass of super Sheep.
 
 class Sheep2 extends Sheep {
-
   Sheep2(int i) {
-    super(i); 
-    sheepX = width/2;
+    super(i);
   }
 
   //method shout which lets the first sheep make a buuh sound.
@@ -13,6 +11,7 @@ class Sheep2 extends Sheep {
       buuh.play();
     }
   }
+  //make the color the color of the rainbow when the mouse is over the rainbow
   void updateColor() {
     if (rainbow.isOverRainbow()) {
       sheepColor=rainbow.c;

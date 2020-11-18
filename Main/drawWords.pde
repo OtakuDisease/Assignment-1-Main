@@ -24,8 +24,8 @@ class DrawWords {
     for (int i=0; i<words.length; i++) {
       newWords.add(wordObjects[i]);
     }
+    
     for (int i=0; i<words.length; i++) {
-
       //take a random index and therefore word from the new arraylist and assign it to the words array
       int randomIndex= int(random(0, newWords.size()-1));
       Words randomWord = newWords.get(randomIndex);

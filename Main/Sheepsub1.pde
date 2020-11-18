@@ -2,8 +2,7 @@
 
 class Sheep1 extends Sheep {
   Sheep1(int i) {
-    super(i); 
-    sheepX = 0;
+    super(i);
   }
 
   //method shout which lets the first sheep make a beeh sound.
@@ -12,6 +11,7 @@ class Sheep1 extends Sheep {
       beeh.play();
     }
   }
+  //make the color the inverted color of the rainbow when the mouse is over the rainbow
   void updateColor() {
     if (rainbow.isOverRainbow()) {
       sheepColor=color(255-red(rainbow.c), 255-green(rainbow.c), 255-blue(rainbow.c));

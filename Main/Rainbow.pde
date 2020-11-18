@@ -15,16 +15,14 @@ class Rainbow {
     image(img, 0, imageY, width, imageHeight);
     loadPixels();
     img.loadPixels();
+    
   }
 
   void update(float mouseXPos, float mouseYPos) {
     if (mouseYPos<imageHeight+imageY && mouseYPos>imageY) {
       int loc = floor(mouseXPos) + (floor(mouseYPos)-1)*width;
       c = pixels[loc];
-      println(c);
-      fill (c);
-      ellipse(width/2, height/2, 20, 30);
+      println("within picture");
     }
-
   }
 }

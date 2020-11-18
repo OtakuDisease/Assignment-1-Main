@@ -5,8 +5,8 @@ class Sheep {
   float sheepX, sheepY;
   float sheepSize, sheepSpeed, sheepHop;
 
-  Sheep(float initX) {
-    sheepX = initX;
+  Sheep(int i) {
+    sheepX = i*width/2;
     sheepY=height/2+height/6;
     sheepSize= width/7;
     sheepSpeed = random(width/800, width/600);

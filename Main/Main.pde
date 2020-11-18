@@ -32,11 +32,10 @@ void setup() {
   words= split(storeText, " ");
   wordsDraw.drawSentence();
   sheep = new Sheep[2];
-  int sheepX=0;
+
   for (int i=0; i<sheep.length; i++) {
-    sheep[i] = new Sheep(sheepX);
-    sheepX+=width/2;
-  }
+    sheep[i] = new Sheep(i);
+    }
   background= new Background();
 }
 

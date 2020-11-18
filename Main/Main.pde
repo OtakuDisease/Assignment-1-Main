@@ -1,5 +1,4 @@
-import processing.sound.*;  //<>//
-/* This is assignment 1 of group 5 of Programming & Physical Computing 
+/* This is assignment 1 of group 5 of Programming & Physical Computing  //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
  
@@ -8,7 +7,8 @@ import processing.sound.*;  //<>//
  You will be able to scramble the words in the sentence by pressing the up-arrowkey, give every letter a random size by pressing the down-arrowkey,
  let the words drop when hovering over them and watch hopping sheeps.
  Give your letter a color by hovering over the rainbow, checking the color-pallete on the sheep and the when your satisfied clicking on the ranbow to make the letters that colorscheme*/
-
+//import the Processing Sound library
+import processing.sound.*; 
 //Introducing variables
 String[] lines;
 String storeText;
@@ -27,6 +27,7 @@ SoundFile beeh;
 SoundFile buuh;
 Rainbow rainbow;
 void setup() {
+  background= new Background();
   beeh = new SoundFile(this, "Sheep-Lamb-Bah.mp3");
   buuh = new SoundFile(this, "Buuh.mp3");
   //Sketch settings
@@ -46,7 +47,7 @@ void setup() {
     sheep[0]= new Sheep1(i);
     sheep[1]= new Sheep2(i);
   }
-  background= new Background();
+  
 }
 
 void draw() {

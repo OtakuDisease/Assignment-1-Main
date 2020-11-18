@@ -6,6 +6,8 @@ class Sheep {
   float sheepX, sheepY;
   float sheepSize, sheepSpeed, sheepHop;
   color sheepColor;
+  float gravity;
+  float dY;
   Sheep(int i) {
     sheepX = i*width/2;
     sheepY=height/2+height/6;
@@ -13,6 +15,8 @@ class Sheep {
     sheepSpeed = random(width/800, width/600);
     sheepHop = 0.8;
     sheepColor=0;
+    dY=0;
+    gravity=0.05;
   }
 
   void display() {
@@ -68,14 +72,15 @@ class Sheep {
     } else {
       sheepX += sheepSpeed;  // makes the sheep move from left to right and come back in the screen on the left
     }
-
-    if (sheepY>height/2+height/10 ) {
-      sheepY -= sheepHop; // makes the sheep hop upwards
-    } 
-    if (sheepY<height/2+height/10+10 || sheepY>height/2+height/5  ) {
-      sheepHop = sheepHop*-1; //makes the sheep land on their feet again
+    //update the sheepY and the dX based on gravity
+    sheepY+=dY;
+    dY+=gravity;
+    //if the sheep hits the ground make him hop  upwards again
+    if (sheepY>background.backgroundY+background.backgroundY/2-50) {
+      dY=-2.5;
     }
   }
+  //announce the color update method and the shout method for the subclasses
   void updateColor() {
   }
   //method for the sheeps to make noise, this is the method in the super which lets the subclasses use this method.

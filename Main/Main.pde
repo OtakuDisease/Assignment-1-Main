@@ -1,4 +1,4 @@
-import processing.sound.*; //<>// //<>// //<>//
+import processing.sound.*; //<>// //<>// //<>// //<>//
 /* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
@@ -50,7 +50,8 @@ void setup() {
 void draw() {
   background.display();
   rainbow.display();
-    for (int i=0; i<sheep.length; i++) {
+  rainbow.update(ourMouseX, ourMouseY);
+  for (int i=0; i<sheep.length; i++) {
     sheep[i].display();
     sheep[i].update();
   }

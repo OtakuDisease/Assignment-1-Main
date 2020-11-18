@@ -1,5 +1,4 @@
 import processing.sound.*; //<>//
-
 /* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
@@ -26,8 +25,8 @@ DrawWords wordsDraw;
 SoundFile file;
 
 void setup() {
-
-  file = new Soundfile(this, "Sheep-Lamb-Bah.mp3");
+  file = new SoundFile(this, "Sheep-Lamb-Bah.mp3");
+  file.play();
   //Sketch settings
   wordsDraw= new DrawWords(); 
   size(800, 800);

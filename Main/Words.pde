@@ -38,7 +38,6 @@ class Words {
       }
       if (falling) {
         letterObjects[i].updateY();
-        letterObjects[i].rotateLetter();
       }
 
       //make the letters wrap around

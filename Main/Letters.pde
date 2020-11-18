@@ -27,10 +27,10 @@ class Letters {
   }
 
   void updateY() {
-
     //Make the letters fall down
     if (letterY+speed<maxY) {
       letterY+=speed;
+      rotateLetter();
     } else { 
       letterY = maxY;
     }

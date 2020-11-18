@@ -1,0 +1,27 @@
+class Rainbow {
+  PImage img;
+  int x, y;
+  color c;
+  int imageHeight;
+  int imageY;
+  Rainbow() {
+    img = loadImage("rainbow.png");
+    imageHeight=height/5;
+    imageY=height/18;
+    c=color(200, 30, 40);
+  }
+
+  void show() {
+    image(img, 0, imageY, width, imageHeight);
+    loadPixels();
+    img.loadPixels();
+      }
+
+  void update(float mouseXPos, float mouseYPos) {
+    if (mouseYPos<imageHeight+imageY && mouseYPos>imageY) {
+      int loc = floor(mouseXPos) + (floor(mouseYPos)-1)*width;
+      c = pixels[loc];
+      println("within picture");
+    }
+  }
+}

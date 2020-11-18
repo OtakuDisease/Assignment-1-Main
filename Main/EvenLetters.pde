@@ -18,8 +18,8 @@ class UnevenLetters extends Letters {
     popMatrix();
   }
   void updateColor(boolean falling) {
-    if(!falling)
-    myColor=color(255-red(rainbow.c), 255-green(rainbow.c), 255-blue(rainbow.c));
+    if (!falling)
+      myColor=color(255-red(rainbow.c), 255-green(rainbow.c), 255-blue(rainbow.c));
   }
   void rotateLetter() {
     degrees+=-6;

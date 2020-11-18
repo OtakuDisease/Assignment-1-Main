@@ -6,7 +6,8 @@ import processing.sound.*;  //<>//
  Program Description:
  This program is made to show an animated greeding card.
  You will be able to scramble the words in the sentence by pressing the up-arrowkey, give every letter a random size by pressing the down-arrowkey,
- let the words drop when hovering over them and watch hopping sheeps.*/
+ let the words drop when hovering over them and watch hopping sheeps.
+ Give your letter a color by hovering over the rainbow, checking the color-pallete on the sheep and the when your satisfied clicking on the ranbow to make the letters that colorscheme*/
 
 //Introducing variables
 String[] lines;

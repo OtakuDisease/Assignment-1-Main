@@ -8,13 +8,14 @@ class Rainbow {
     img = loadImage("rainbow.png");
     imageHeight=height/5;
     imageY=height/18;
-        c=color(200, 30, 40);
+    c=color(200, 30, 40);
   }
 
   void display() {
     image(img, 0, imageY, width, imageHeight);
     loadPixels();
     img.loadPixels();
+    
   }
 
   void update(float mouseXPos, float mouseYPos) {
@@ -22,9 +23,6 @@ class Rainbow {
       int loc = floor(mouseXPos) + (floor(mouseYPos)-1)*width;
       c = pixels[loc];
       println("within picture");
-      fill (c);
-      ellipse(width/2, height/2, 20, 30);
     }
-
   }
 }

@@ -1,4 +1,4 @@
-//In this class everything concerning the letters is made. //<>// //<>// //<>//
+//In this class everything concerning the letters is made. //<>// //<>// //<>// //<>//
 
 class Letters {
 
@@ -44,7 +44,6 @@ class Letters {
 
   //show the letters according to size
   void display() {
-    
   }
 
   //give this letter a new random size

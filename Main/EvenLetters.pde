@@ -10,7 +10,7 @@ pushMatrix();
     float middleY=letterY-(textWidth(c)/3);
     translate(middleX,middleY); 
     rotate(radians(degrees));
-    fill(myColor);
+    fill(rainbow.c); // has to be rainbow
     textSize(mySize);
     text(c, 0-(textWidth(c)/2), 0+(textWidth(c)/3));
     popMatrix();

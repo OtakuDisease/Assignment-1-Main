@@ -1,4 +1,4 @@
-import processing.sound.*; //<>// //<>// //<>//
+import processing.sound.*; //<>// //<>// //<>// //<>//
 /* This is assignment 1 of group 5 of Programming & Physical Computing //<>// //<>//
  by: Marnix Lueb, Daisy Baars, Ysbrand Burgstede and Tristan van Marle
  11-11-2020
@@ -24,7 +24,6 @@ Sheep[] sheep;
 DrawWords wordsDraw;
 SoundFile file;
 Rainbow rainbow;
-
 void setup() {
   file = new SoundFile(this, "Sheep-Lamb-Bah.mp3");
   file.play();
@@ -39,7 +38,7 @@ void setup() {
   words= split(storeText, " ");
   wordsDraw.drawSentence();
   sheep = new Sheep[2];
-  rainbow = new Rainbow();
+  rainbow = new Rainbow(100,100);
 
   for (int i=0; i<sheep.length; i++) {
     sheep[i] = new Sheep(i);

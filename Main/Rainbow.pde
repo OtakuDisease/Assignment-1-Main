@@ -1,24 +1,26 @@
 class Rainbow{
 PImage img;
- color c;
- float x, y;
+ int x, y;
 
 
-Rainbow(int initX, int initY){
+Rainbow(){
   img = loadImage("rainbow.png");
   //loadPixels();
   //img.loadPixels();
-     x = initX;
-   y = initY;
+  x = 10;
+  y= 20;
+
+   
 }
 
 void display(){
-  //image(img,0,height/18,width,height/5);
+  image(img,0,height/18,width,height/5);
   //loadPixels();
   //img.loadPixels();
+  int loc = x + y*5000;
 
- 
-c = img.get(int(x),int(y));
+ color c = img.pixels[loc];
+
   fill (c);
   ellipse(x,y,20,30);
 }

@@ -23,9 +23,11 @@ Background background;
 Sheep[] sheep;
 DrawWords wordsDraw;
 SoundFile file;
+Rainbow rainbow;
 
 void setup() {
   file = new SoundFile(this, "Sheep-Lamb-Bah.mp3");
+  file.play();
   //Sketch settings
   wordsDraw= new DrawWords(); 
   size(800, 800);
@@ -40,7 +42,7 @@ void setup() {
   rainbow = new Rainbow();
 
   for (int i=0; i<sheep.length; i++) {
-    sheep[i] = new Sheep1(i);
+    sheep[i] = new Sheep(i);
   }
   background= new Background();
 }

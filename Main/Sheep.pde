@@ -75,6 +75,8 @@ class Sheep {
       sheepHop = sheepHop*-1; //makes the sheep land on their feet again
     }
   }
+
+  //method for the sheeps to make noise, this is the method in the super which lets the subclasses use this method.
   void shout(float tempMouseX, float tempMouseY) {
   }
 }

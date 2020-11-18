@@ -1,3 +1,6 @@
+//subclass UnevenLetters of super Letters.
+//In here the rotation of the uneven letters and their coloring is handled.
+
 class EvenLetters extends Letters {
   color myColor;
   EvenLetters(char initC, float initLetterX, float initLetterY, int textColor) {

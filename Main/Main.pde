@@ -30,7 +30,7 @@ SoundFile beeh;
 SoundFile buuh;
 Rainbow rainbow;
 void setup() {
-  amountSheep=2;
+  amountSheep=5;
   background= new Background();
   beeh = new SoundFile(this, "Sheep-Lamb-Bah.mp3");
   buuh = new SoundFile(this, "Buuh.mp3");
